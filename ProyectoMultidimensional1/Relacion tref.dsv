@@ -1,0 +1,358 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c13fd602-7c96-4381-87fc-7265811e9f12" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Relacion tref</ID>
+  <Name>Relacion tref</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>PRGPRODUCCION</DataSourceID>
+  <Schema>
+    <xs:schema id="Relacion_x0020_tref" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Relacion_x0020_tref" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="7cf3119e-4092-4b21-8a40-86159bc0a2e3">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_J_orden_prod_tef" msprop:design-time-name="4aa17878-09b7-4680-a6bd-c3b1478feb6f" msprop:DbTableName="J_orden_prod_tef" msprop:FriendlyName="J_orden_prod_tef" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="consecutivo" msprop:design-time-name="61000626-b50b-4647-8bc5-7122bedb0cea" msprop:DbColumnName="consecutivo" msprop:FriendlyName="consecutivo" type="xs:decimal" />
+                  <xs:element name="prod_final" msprop:design-time-name="51806d95-2031-433c-8b79-60539e90e6e0" msprop:DbColumnName="prod_final" msprop:FriendlyName="prod_final" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="diam_min" msprop:design-time-name="7276d6e3-f86d-42e5-a053-4dde9c165637" msprop:DbColumnName="diam_min" msprop:FriendlyName="diam_min" type="xs:decimal" />
+                  <xs:element name="diam_max" msprop:design-time-name="524cc7dd-73ef-43ee-b7e6-56a0405f6e7b" msprop:DbColumnName="diam_max" msprop:FriendlyName="diam_max" type="xs:decimal" />
+                  <xs:element name="cant_prog" msprop:design-time-name="8932d1cd-742c-4dc0-8a5e-18debc611712" msprop:DbColumnName="cant_prog" msprop:FriendlyName="cant_prog" type="xs:decimal" />
+                  <xs:element name="diametro" msprop:design-time-name="0faa6327-15ec-4a06-9b96-eef45388c808" msprop:DbColumnName="diametro" msprop:FriendlyName="diametro" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="origen" msprop:design-time-name="5574df42-e6c5-4e04-8308-fe0384c54519" msprop:DbColumnName="origen" msprop:FriendlyName="origen" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="materia_prima" msprop:design-time-name="515eb4a1-3a52-4741-99a8-0234a2c84d51" msprop:DbColumnName="materia_prima" msprop:FriendlyName="materia_prima" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="trac_ini" msprop:design-time-name="b4509693-454e-4bfb-8eee-225eced7720a" msprop:DbColumnName="trac_ini" msprop:FriendlyName="trac_ini" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="trac_fin" msprop:design-time-name="899053bf-1bc1-4f1f-90ee-5891ba1c6026" msprop:DbColumnName="trac_fin" msprop:FriendlyName="trac_fin" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="numPasos" msprop:design-time-name="c140a1e3-d906-422d-95e8-d1a6966117ff" msprop:DbColumnName="numPasos" msprop:FriendlyName="numPasos" type="xs:int" minOccurs="0" />
+                  <xs:element name="calidad" msprop:design-time-name="a918caac-dba7-4813-bdc6-6e109234f2f2" msprop:DbColumnName="calidad" msprop:FriendlyName="calidad" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nit" msprop:design-time-name="0a5f5ad7-0a94-469e-945a-98999b607d09" msprop:DbColumnName="nit" msprop:FriendlyName="nit" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="tipoCliente" msprop:design-time-name="b149886b-ad65-4f64-a0bc-fbb8d9d32646" msprop:DbColumnName="tipoCliente" msprop:FriendlyName="tipoCliente" type="xs:int" />
+                  <xs:element name="fecha_prog" msprop:design-time-name="5b070085-9dae-46b0-9613-3cdbd8551e5e" msprop:DbColumnName="fecha_prog" msprop:FriendlyName="fecha_prog" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="id_maquina" msprop:design-time-name="301ecc8c-a8c4-409c-85ed-e6b021e569a4" msprop:DbColumnName="id_maquina" msprop:FriendlyName="id_maquina" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="mes" msprop:design-time-name="70121381-1825-431e-aa30-5787e3f4be1a" msprop:DbColumnName="mes" msprop:FriendlyName="mes" type="xs:int" minOccurs="0" />
+                  <xs:element name="ano" msprop:design-time-name="119da993-1a1b-4dfa-8b82-574d6062d7b7" msprop:DbColumnName="ano" msprop:FriendlyName="ano" type="xs:int" minOccurs="0" />
+                  <xs:element name="notas_auditoria" msprop:design-time-name="5b4efa52-0946-4755-8ed5-531e705733ef" msprop:DbColumnName="notas_auditoria" msprop:FriendlyName="notas_auditoria" type="xs:string" minOccurs="0" />
+                  <xs:element name="notas" msprop:design-time-name="4b6f210f-8197-4643-80aa-8b5d0910f23a" msprop:DbColumnName="notas" msprop:FriendlyName="notas" type="xs:string" minOccurs="0" />
+                  <xs:element name="oculto" msprop:design-time-name="b78559d6-4865-4a9f-b491-0ef2d93d752e" msprop:DbColumnName="oculto" msprop:FriendlyName="oculto" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="cod_alambron" msprop:design-time-name="08860c8c-e66b-476c-b941-83539631353f" msprop:DbColumnName="cod_alambron" msprop:FriendlyName="cod_alambron" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="or_rec" msprop:design-time-name="a4f2bf1a-c29a-4abe-9fa6-ec3cd3b2ab35" msprop:DbColumnName="or_rec" msprop:FriendlyName="or_rec" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fecha_creacion" msprop:design-time-name="35b01427-09b9-42f4-aeb5-d10566256a96" msprop:DbColumnName="fecha_creacion" msprop:FriendlyName="fecha_creacion" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="bloqueo" msprop:design-time-name="336b7c75-6b81-422d-b2e2-fa484873c78b" msprop:DbColumnName="bloqueo" msprop:FriendlyName="bloqueo" type="xs:int" minOccurs="0" />
+                  <xs:element name="costo_prod_final" msprop:design-time-name="497f3922-657b-4a6d-ad41-aa14a3603ea5" msprop:DbColumnName="costo_prod_final" msprop:FriendlyName="costo_prod_final" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="costo_mat_prima" msprop:design-time-name="398bd023-4bcc-47f9-b310-02e2b9b49f5f" msprop:DbColumnName="costo_mat_prima" msprop:FriendlyName="costo_mat_prima" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="notas_liquidacion" msprop:design-time-name="c8167060-811a-4469-bf4f-1d4471fea5c4" msprop:DbColumnName="notas_liquidacion" msprop:FriendlyName="notas_liquidacion" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_J_rollos_tref" msprop:design-time-name="1f0a86a3-b183-403f-aaae-e5ab35506f76" msprop:DbTableName="J_rollos_tref" msprop:FriendlyName="J_rollos_tref" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="consecutivo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="f87e6116-f846-4a3a-b32a-9bdbb4023517" msprop:DbColumnName="consecutivo" msprop:FriendlyName="consecutivo" type="xs:decimal" />
+                  <xs:element name="id_rollo" msprop:design-time-name="33220ad8-8c63-4744-90ed-eae313df2d84" msprop:DbColumnName="id_rollo" msprop:FriendlyName="id_rollo" type="xs:decimal" />
+                  <xs:element name="cod_orden" msprop:design-time-name="b80bd36b-728f-423b-87cc-bef43dc0db68" msprop:DbColumnName="cod_orden" msprop:FriendlyName="cod_orden">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="id_detalle" msprop:design-time-name="1d309782-9555-40de-b4a1-34c1a95e4a73" msprop:DbColumnName="id_detalle" msprop:FriendlyName="id_detalle">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="peso" msprop:design-time-name="8350c3f4-f5b9-4262-9f5c-caacb7c6b4ce" msprop:DbColumnName="peso" msprop:FriendlyName="peso" type="xs:float" />
+                  <xs:element name="colada" msprop:design-time-name="baca2a39-eab2-43bf-8766-c864e687bbf6" msprop:DbColumnName="colada" msprop:FriendlyName="colada" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="numOrdPdnMp" msprop:design-time-name="83732839-da09-4dfb-9f2b-ce8eb9ecc0b6" msprop:DbColumnName="numOrdPdnMp" msprop:FriendlyName="numOrdPdnMp" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="numRolloPdn" msprop:design-time-name="002749d0-d23e-4a56-aab8-72405523c637" msprop:DbColumnName="numRolloPdn" msprop:FriendlyName="numRolloPdn" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="traccion" msprop:design-time-name="50c9a978-ba91-454d-9221-63ec83528bc6" msprop:DbColumnName="traccion" msprop:FriendlyName="traccion" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="anulado" msprop:design-time-name="4f394412-a529-4103-a1e0-98419eec1be7" msprop:DbColumnName="anulado" msprop:FriendlyName="anulado" type="xs:int" minOccurs="0" />
+                  <xs:element name="motivo" msprop:design-time-name="997964b4-570d-4c7d-b6a2-cac4d5202d51" msprop:DbColumnName="motivo" msprop:FriendlyName="motivo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="250" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="traslado" msprop:design-time-name="be418aaf-c314-423b-9755-da9c6bfcc652" msprop:DbColumnName="traslado" msprop:FriendlyName="traslado" type="xs:int" minOccurs="0" />
+                  <xs:element name="saga" msprop:design-time-name="f245501d-0469-43da-8d5f-1e6a4c51ec69" msprop:DbColumnName="saga" msprop:FriendlyName="saga" type="xs:int" minOccurs="0" />
+                  <xs:element name="bobina" msprop:design-time-name="8a949890-a3b1-48c1-9e2d-323516b65f6f" msprop:DbColumnName="bobina" msprop:FriendlyName="bobina" type="xs:int" minOccurs="0" />
+                  <xs:element name="traslado_D" msprop:design-time-name="d1b2b991-cb0e-4682-b818-33599c83514f" msprop:DbColumnName="traslado_D" msprop:FriendlyName="traslado_D" type="xs:int" minOccurs="0" />
+                  <xs:element name="scla" msprop:design-time-name="76096834-b2f1-4c8e-892a-b66875ad4fa2" msprop:DbColumnName="scla" msprop:FriendlyName="scla" type="xs:int" minOccurs="0" />
+                  <xs:element name="destino" msprop:design-time-name="24c680aa-9243-4ee4-b55c-9c16bd873816" msprop:DbColumnName="destino" msprop:FriendlyName="destino" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="srec" msprop:design-time-name="21484317-b111-4607-be86-bb8a6c6f5638" msprop:DbColumnName="srec" msprop:FriendlyName="srec" type="xs:int" minOccurs="0" />
+                  <xs:element name="diferencia" msprop:design-time-name="59ced96a-29da-461f-b40b-77ee742d2147" msprop:DbColumnName="diferencia" msprop:FriendlyName="diferencia" type="xs:float" minOccurs="0" />
+                  <xs:element name="manuales" msprop:design-time-name="34f10b5f-a7cb-46aa-96d8-084ac9ffce1e" msprop:DbColumnName="manuales" msprop:FriendlyName="manuales" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="scal" msprop:design-time-name="da6b4682-9df6-4fb6-b1b7-e9598002fc83" msprop:DbColumnName="scal" msprop:FriendlyName="scal" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="nro_consu" msprop:design-time-name="79c17529-195d-484a-9e38-74f640b473fa" msprop:DbColumnName="nro_consu" msprop:FriendlyName="nro_consu" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="scae" msprop:design-time-name="5326f402-cd63-4d2e-ad52-ed3ebd22f9ab" msprop:DbColumnName="scae" msprop:FriendlyName="scae" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="sar" msprop:design-time-name="3e5e519a-3fb0-4466-9b78-bfda4858dfaa" msprop:DbColumnName="sar" msprop:FriendlyName="sar" type="xs:int" minOccurs="0" />
+                  <xs:element name="sav" msprop:design-time-name="496eb218-1f91-4669-a2f3-45480e8cdafe" msprop:DbColumnName="sav" msprop:FriendlyName="sav" type="xs:int" minOccurs="0" />
+                  <xs:element name="no_conforme" msprop:design-time-name="0f901b24-81cf-44cb-8006-189938e7b8a0" msprop:DbColumnName="no_conforme" msprop:FriendlyName="no_conforme" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fecha_hora" msprop:design-time-name="9aa3254d-b20c-4736-8132-f8d7084b741b" msprop:DbColumnName="fecha_hora" msprop:FriendlyName="fecha_hora" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="calidad" msprop:design-time-name="abda23ee-1ebb-40f6-af49-0bf4d3295db1" msprop:DbColumnName="calidad" msprop:FriendlyName="calidad" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_J_det_orden_prod" msprop:design-time-name="85f9c75e-cdd7-48f4-84af-fdc0275dcaae" msprop:DbTableName="J_det_orden_prod" msprop:FriendlyName="J_det_orden_prod" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="cod_orden" msprop:design-time-name="dfa7d19c-0afc-4774-bdaa-165ccef7051e" msprop:DbColumnName="cod_orden" msprop:FriendlyName="cod_orden" type="xs:decimal" />
+                  <xs:element name="id_detalle" msprop:design-time-name="7ec9b212-c566-45e2-9241-25e1ec6a87f3" msprop:DbColumnName="id_detalle" msprop:FriendlyName="id_detalle" type="xs:decimal" />
+                  <xs:element name="operario" msprop:design-time-name="1bfa7d7d-76c9-4b04-90de-0d5956475f55" msprop:DbColumnName="operario" msprop:FriendlyName="operario" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fecha_prod" msprop:design-time-name="19b47cff-2184-4701-8dc5-c8c11ac17013" msprop:DbColumnName="fecha_prod" msprop:FriendlyName="fecha_prod" type="xs:dateTime" />
+                  <xs:element name="id_turno" msprop:design-time-name="9a77f54b-982f-4055-8369-deeffce83f6e" msprop:DbColumnName="id_turno" msprop:FriendlyName="id_turno" type="xs:int" minOccurs="0" />
+                  <xs:element name="paro13" msprop:design-time-name="ed96b45a-381c-463d-90cf-f828643402ff" msprop:DbColumnName="paro13" msprop:FriendlyName="paro13" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro12" msprop:design-time-name="bde150e6-8ec3-441c-8faa-4661561478e3" msprop:DbColumnName="paro12" msprop:FriendlyName="paro12" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro11" msprop:design-time-name="289f8997-bdad-48b3-b08c-11bffb73556a" msprop:DbColumnName="paro11" msprop:FriendlyName="paro11" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro10" msprop:design-time-name="2481a6a7-e87e-4f53-be21-f43b8d567727" msprop:DbColumnName="paro10" msprop:FriendlyName="paro10" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro9" msprop:design-time-name="4b9ea334-ca47-444b-979c-3ecf15ab5400" msprop:DbColumnName="paro9" msprop:FriendlyName="paro9" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro8" msprop:design-time-name="d55b054d-d157-41c5-9d56-ac049c024e7c" msprop:DbColumnName="paro8" msprop:FriendlyName="paro8" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro7" msprop:design-time-name="c8e87c56-2c83-479a-8da8-2bccd749c40c" msprop:DbColumnName="paro7" msprop:FriendlyName="paro7" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro6" msprop:design-time-name="c64e7ad0-3372-4d90-9d95-adc70bc6e960" msprop:DbColumnName="paro6" msprop:FriendlyName="paro6" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro5" msprop:design-time-name="4cea5078-c038-49ed-8f44-60237e3262a9" msprop:DbColumnName="paro5" msprop:FriendlyName="paro5" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro4" msprop:design-time-name="219fcec4-ffb6-494a-b2d4-0c7d37d85651" msprop:DbColumnName="paro4" msprop:FriendlyName="paro4" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro3" msprop:design-time-name="0be338df-67ed-4ebe-826e-c0fd6bddce2a" msprop:DbColumnName="paro3" msprop:FriendlyName="paro3" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro2" msprop:design-time-name="0f0aa8a3-91be-4bf7-90db-181d4f7c32ae" msprop:DbColumnName="paro2" msprop:FriendlyName="paro2" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro1" msprop:design-time-name="ba9d5648-b98e-4c2e-b984-79e9349d4a49" msprop:DbColumnName="paro1" msprop:FriendlyName="paro1" type="xs:float" minOccurs="0" />
+                  <xs:element name="paro0" msprop:design-time-name="29ef4ea3-a2a1-4911-9020-dfa9e03ecc03" msprop:DbColumnName="paro0" msprop:FriendlyName="paro0" type="xs:float" minOccurs="0" />
+                  <xs:element name="min_trab" msprop:design-time-name="f3cda3b5-ad4d-4256-af4b-21e24e420cc7" msprop:DbColumnName="min_trab" msprop:FriendlyName="min_trab" type="xs:float" minOccurs="0" />
+                  <xs:element name="velocidad" msprop:design-time-name="f0b88744-70a3-407e-9f6f-aef612dc2cf2" msprop:DbColumnName="velocidad" msprop:FriendlyName="velocidad" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="notas" msprop:design-time-name="730b917f-a251-433d-96d9-d6957912466f" msprop:DbColumnName="notas" msprop:FriendlyName="notas" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hIni" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="e1297832-7bd3-405a-986f-837954f7cd42" msprop:DbColumnName="hIni" msprop:FriendlyName="hIni" type="xs:anyType" minOccurs="0" />
+                  <xs:element name="hFin" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="d9c993c2-5ac5-4139-bce6-da6b5896c961" msprop:DbColumnName="hFin" msprop:FriendlyName="hFin" type="xs:anyType" minOccurs="0" />
+                  <xs:element name="auxiliar" msprop:design-time-name="33fbde5f-fa39-47fe-948a-4974bc82e2f1" msprop:DbColumnName="auxiliar" msprop:FriendlyName="auxiliar" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="cerrado" msprop:design-time-name="68d1cf18-054d-4baa-a6ec-5f79a392526f" msprop:DbColumnName="cerrado" msprop:FriendlyName="cerrado" type="xs:int" minOccurs="0" />
+                  <xs:element name="estadoMaq" msprop:design-time-name="06176a3b-6ad4-48db-97de-d489ec75895f" msprop:DbColumnName="estadoMaq" msprop:FriendlyName="estadoMaq" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HorometroIni" msprop:design-time-name="21217c53-c6db-4490-995c-1c835b94df30" msprop:DbColumnName="HorometroIni" msprop:FriendlyName="HorometroIni" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="HorometroFin" msprop:design-time-name="4b47e92a-78e0-49e3-bbea-7246e104723e" msprop:DbColumnName="HorometroFin" msprop:FriendlyName="HorometroFin" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="anulado" msprop:design-time-name="6861b563-16a8-433f-8607-1e8796c351d8" msprop:DbColumnName="anulado" msprop:FriendlyName="anulado" type="xs:int" minOccurs="0" />
+                  <xs:element name="fec_hora_ini" msprop:design-time-name="aa2d06e4-5a1d-4325-9d2d-61ec1504b42d" msprop:DbColumnName="fec_hora_ini" msprop:FriendlyName="fec_hora_ini" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="fec_hora_fin" msprop:design-time-name="66f22ea2-9045-480c-9b69-d7e2f5a091fe" msprop:DbColumnName="fec_hora_fin" msprop:FriendlyName="fec_hora_fin" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="amarres" msprop:design-time-name="41bcc19a-96d2-44eb-9442-73a5409617ed" msprop:DbColumnName="amarres" msprop:FriendlyName="amarres" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="desperdicio" msprop:design-time-name="b4a02f46-4e9e-47b3-91d3-89effd0293cd" msprop:DbColumnName="desperdicio" msprop:FriendlyName="desperdicio" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="transaccion_salida" msprop:design-time-name="b78d19bc-eb84-44d6-913d-d4847385954b" msprop:DbColumnName="transaccion_salida" msprop:FriendlyName="transaccion_salida" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="transaccion_entrada" msprop:design-time-name="e746000d-367a-464d-8d13-e8521d08cbc5" msprop:DbColumnName="transaccion_entrada" msprop:FriendlyName="transaccion_entrada" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="id_rollo_alambron" msprop:design-time-name="03b21c64-e796-45c6-bf73-e2f561ada72c" msprop:DbColumnName="id_rollo_alambron" msprop:FriendlyName="id_rollo_alambron" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="lote_completo" msprop:design-time-name="e21669d0-c215-4370-b563-04bf24e7dcea" msprop:DbColumnName="lote_completo" msprop:FriendlyName="lote_completo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nro_lote" msprop:design-time-name="56db6090-a1b5-4e61-8b83-1cac55904951" msprop:DbColumnName="nro_lote" msprop:FriendlyName="nro_lote" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="limite_lote" msprop:design-time-name="4afca0ff-afed-437a-8996-afe2ad18c9af" msprop:DbColumnName="limite_lote" msprop:FriendlyName="limite_lote" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="nro_rollos" msprop:design-time-name="f6990811-4bd6-44b7-87c4-57c84c791bce" msprop:DbColumnName="nro_rollos" msprop:FriendlyName="nro_rollos" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_J_orden_prod_tef" />
+          <xs:field xpath="consecutivo" />
+        </xs:unique>
+        <xs:unique name="dbo_J_rollos_tref_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_J_rollos_tref" />
+          <xs:field xpath="id_rollo" />
+          <xs:field xpath="cod_orden" />
+          <xs:field xpath="id_detalle" />
+        </xs:unique>
+        <xs:unique name="dbo_J_det_orden_prod_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_J_det_orden_prod" />
+          <xs:field xpath="cod_orden" />
+          <xs:field xpath="id_detalle" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <Relacion_x0020_tref xmlns="" />
+  </Schema>
+</DataSourceView>

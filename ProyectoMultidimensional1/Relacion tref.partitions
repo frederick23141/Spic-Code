@@ -1,0 +1,65 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="bfaf49a7-e6d9-4b6d-bd6d-398b1fbb1d34" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Relacion tref</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>J Orden Prod Tef</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="0a4b1235-eb35-46e8-a543-2a6b4eaf275a">
+          <ID>J Orden Prod Tef</ID>
+          <Name>J Orden Prod Tef</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="68c2ab09-bb0e-496f-8c03-a9ddc645e44e">
+            <DataSourceViewID>Relacion tref</DataSourceViewID>
+            <TableID>dbo_J_orden_prod_tef</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>J Rollos Tref</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="b2aba93f-8c37-46d5-a36e-30446094a9c4">
+          <ID>J Rollos Tref</ID>
+          <Name>J Rollos Tref</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="91a42092-5b4f-47bb-96c1-aee6102b5a42">
+            <DataSourceViewID>Relacion tref</DataSourceViewID>
+            <TableID>dbo_J_rollos_tref</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>J Det Orden Prod</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="12ffbfd5-7136-46fb-898b-3420c9efc93e">
+          <ID>J Det Orden Prod</ID>
+          <Name>J Det Orden Prod</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1816aa28-4050-4724-9aea-bdb349a45281">
+            <DataSourceViewID>Relacion tref</DataSourceViewID>
+            <TableID>dbo_J_det_orden_prod</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

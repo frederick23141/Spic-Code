@@ -1,0 +1,303 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4c6fdf52-de44-4eec-9e52-562c035f7e4a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Relacion tref</ID>
+  <Name>Relacion tref</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="ebe54c9b-cc55-4d0f-8065-ca559e9ac2b5">
+      <ID>J Orden Prod Tef</ID>
+      <Name>J Orden Prod Tef</Name>
+      <DimensionID>J Orden Prod Tef</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="812403d4-47de-46fd-83c9-700577d17a52">
+          <AttributeID>Consecutivo</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="5e34df60-972b-41ae-ba0c-90f75dab2075">
+      <ID>J Rollos Tref</ID>
+      <Name>J Rollos Tref</Name>
+      <DimensionID>J Rollos Tref</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="933192f7-464d-41ad-a0dc-3757ed46e482">
+          <AttributeID>Id Rollo</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="cd490691-9c96-424a-888c-322523eb6013">
+      <ID>J Det Orden Prod</ID>
+      <Name>J Det Orden Prod</Name>
+      <DimensionID>J Det Orden Prod</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="088818c9-e884-4917-b672-eb6382fc6317">
+          <AttributeID>Cod Orden</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="03db0b9e-9ff1-4f3e-8885-20399056906f">
+      <ID>J Orden Prod Tef</ID>
+      <Name>J Orden Prod Tef</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="ec55c98a-bc10-474a-94e6-97a5d1db1cce">
+          <ID>Cant Prog</ID>
+          <Name>Cant Prog</Name>
+          <Source dwd:design-time-name="07b460f0-f05a-4ed8-8feb-fc827fc3af3f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="87fd05aa-652d-48e3-8b89-70bfa30490d2">
+              <TableID>dbo_J_orden_prod_tef</TableID>
+              <ColumnID>cant_prog</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3f6300e2-3d4a-43eb-a025-cec3e52fb468">
+          <ID>Tipo Cliente</ID>
+          <Name>Tipo Cliente</Name>
+          <Source dwd:design-time-name="450627db-79bf-45e3-a7b0-f466c99b17c8">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b382796e-f6dd-4d1b-b46c-68340ee27968">
+              <TableID>dbo_J_orden_prod_tef</TableID>
+              <ColumnID>tipoCliente</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4f7d694f-e3fc-4f0b-8622-cc70c780b5c6">
+          <ID>Id Maquina</ID>
+          <Name>Id Maquina</Name>
+          <Source dwd:design-time-name="aa812621-cb57-4ede-9767-288194b602aa">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="14e9b25f-82a1-4890-b786-74c0833f5c22">
+              <TableID>dbo_J_orden_prod_tef</TableID>
+              <ColumnID>id_maquina</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3d3b16fd-e638-481e-88e1-2dd008b8fb98">
+          <ID>Mes</ID>
+          <Name>Mes</Name>
+          <Source dwd:design-time-name="76960bcc-d2f2-4933-a913-a7d45f16c322">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e102e103-aa59-45b7-b6b5-2eb8d05a01eb">
+              <TableID>dbo_J_orden_prod_tef</TableID>
+              <ColumnID>mes</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="499863e4-a0f0-4e8c-bef8-d5d9c346bd14">
+          <ID>Ano</ID>
+          <Name>Ano</Name>
+          <Source dwd:design-time-name="b968078a-1173-4d65-a133-bcab8a8682d1">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="680672ba-5005-45f2-aeb2-9d40e8a9a5ef">
+              <TableID>dbo_J_orden_prod_tef</TableID>
+              <ColumnID>ano</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="206adc6c-a75c-4bbd-a129-8a51bcfe10c3">
+          <CubeDimensionID>J Orden Prod Tef</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0d189456-f2e0-4ca0-962a-c0fd0a9b5f47">
+              <AttributeID>Consecutivo</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a55e36dd-7287-48be-8da0-d351b48e4f8b">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d3ace99d-57a1-4fff-9d8d-a4a2369878dc">
+                    <TableID>dbo_J_orden_prod_tef</TableID>
+                    <ColumnID>consecutivo</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="879e4f84-0e60-41d8-b237-3d019398e8b3">
+      <ID>J Rollos Tref</ID>
+      <Name>J Rollos Tref</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="3d03c929-1df5-44e1-bd4c-d33d25d81d9a">
+          <ID>Consecutivo</ID>
+          <Name>Consecutivo</Name>
+          <Source dwd:design-time-name="463d1ca0-a9f2-41a7-9e8d-81e3b3cb799b">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6812ca53-8140-4afb-8cb5-2caad13be0b7">
+              <TableID>dbo_J_rollos_tref</TableID>
+              <ColumnID>consecutivo</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6b16967b-73ce-4553-8342-160837e67d2d">
+          <ID>Peso</ID>
+          <Name>Peso</Name>
+          <Source dwd:design-time-name="49d7afa6-1d56-45ab-8716-dd61941f7045">
+            <DataType>Single</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="518d7a21-b596-4048-9739-0805c09a78b5">
+              <TableID>dbo_J_rollos_tref</TableID>
+              <ColumnID>peso</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="67ecc76c-17dd-4360-bc75-e8e4bb7f68fc">
+          <CubeDimensionID>J Rollos Tref</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b71a12db-4beb-4576-a080-5503ec8ec045">
+              <AttributeID>Id Rollo</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7d76201a-9d2f-413b-97f4-1e7349c16e39">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="253fab46-27af-4a4c-be5b-e80da3a81fe3">
+                    <TableID>dbo_J_rollos_tref</TableID>
+                    <ColumnID>id_rollo</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="e11532b9-6d31-42bb-b64b-6581c98a3f87">
+                  <DataType>WChar</DataType>
+                  <DataSize>40</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="19f195fc-4ff9-4a4e-a97c-e65da6a1fa53">
+                    <TableID>dbo_J_rollos_tref</TableID>
+                    <ColumnID>cod_orden</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="cf10c5a5-3d11-42b7-aca0-361c8eb3a066">
+                  <DataType>WChar</DataType>
+                  <DataSize>40</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="316f57a6-5658-48b3-a520-d66847dad044">
+                    <TableID>dbo_J_rollos_tref</TableID>
+                    <ColumnID>id_detalle</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="36f62ea7-76d1-4960-a669-298881fe83ad">
+      <ID>J Det Orden Prod</ID>
+      <Name>J Det Orden Prod</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="f51ef578-5404-400c-a2d4-fa7a86373887">
+          <ID>Id Turno</ID>
+          <Name>Id Turno</Name>
+          <Source dwd:design-time-name="b982edd5-18f6-4c32-89f2-1c03ff5939ad">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4668719b-fa6c-4ae8-946f-1919380ff363">
+              <TableID>dbo_J_det_orden_prod</TableID>
+              <ColumnID>id_turno</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="59bd5e05-6de7-4609-9569-c62cd13ff476">
+          <ID>Velocidad</ID>
+          <Name>Velocidad</Name>
+          <Source dwd:design-time-name="2239ee29-c7e2-4ebe-a11f-d26a4a105ed8">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f0c8a2be-9b32-4eb3-b07c-e227fbc5b7c8">
+              <TableID>dbo_J_det_orden_prod</TableID>
+              <ColumnID>velocidad</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="bf13cbb1-0dcd-4586-bc56-4fb7c5a08c66">
+          <CubeDimensionID>J Det Orden Prod</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e55ae718-680a-4c47-bf04-f17585779214">
+              <AttributeID>Cod Orden</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cb777bca-c79b-4868-b149-82fc32e1a904">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="be8de165-630d-4d96-929b-436e8d2b2661">
+                    <TableID>dbo_J_det_orden_prod</TableID>
+                    <ColumnID>cod_orden</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="07e26967-c55e-4804-94e7-a7b96ef99f17">
+                  <DataType>Double</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c5aefef7-3c86-459b-aa5d-ad663cf7d7a5">
+                    <TableID>dbo_J_det_orden_prod</TableID>
+                    <ColumnID>id_detalle</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="305e5b5c-ebb5-4653-8f1b-0d1a257360de">
+    <DataSourceViewID>Relacion tref</DataSourceViewID>
+  </Source>
+</Cube>

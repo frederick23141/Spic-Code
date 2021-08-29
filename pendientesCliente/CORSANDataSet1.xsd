@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CORSANDataSet1" targetNamespace="http://tempuri.org/CORSANDataSet1.xsd" xmlns:mstns="http://tempuri.org/CORSANDataSet1.xsd" xmlns="http://tempuri.org/CORSANDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CORSANConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CORSANConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Spic.My.MySettings.GlobalReference.Default.CORSANConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Jjv_usuariosTableAdapter" GeneratorDataComponentClassName="Jjv_usuariosTableAdapter" Name="Jjv_usuarios" UserDataComponentName="Jjv_usuariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CORSANConnectionString (MySettings)" DbObjectName="CORSAN.dbo.Jjv_usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT     Vendedor, Nombres
+FROM         Jjv_usuarios
+WHERE     (Vendedor &lt;&gt; 1020) OR
+                      (Nombres = 'OFICINAS')
+GROUP BY Vendedor, Nombres
+ORDER BY Nombres</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Vendedor" DataSetColumn="Vendedor" />
+              <Mapping SourceColumn="Nombres" DataSetColumn="Nombres" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CORSANDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CORSANDataSet1" msprop:Generator_UserDSName="CORSANDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Jjv_usuarios" msprop:Generator_TableClassName="Jjv_usuariosDataTable" msprop:Generator_TableVarName="tableJjv_usuarios" msprop:Generator_TablePropName="Jjv_usuarios" msprop:Generator_RowDeletingName="Jjv_usuariosRowDeleting" msprop:Generator_RowChangingName="Jjv_usuariosRowChanging" msprop:Generator_RowEvHandlerName="Jjv_usuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="Jjv_usuariosRowDeleted" msprop:Generator_UserTableName="Jjv_usuarios" msprop:Generator_RowChangedName="Jjv_usuariosRowChanged" msprop:Generator_RowEvArgName="Jjv_usuariosRowChangeEvent" msprop:Generator_RowClassName="Jjv_usuariosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Vendedor" msprop:Generator_ColumnVarNameInTable="columnVendedor" msprop:Generator_ColumnPropNameInRow="Vendedor" msprop:Generator_ColumnPropNameInTable="VendedorColumn" msprop:Generator_UserColumnName="Vendedor" type="xs:int" minOccurs="0" />
+              <xs:element name="Nombres" msprop:Generator_ColumnVarNameInTable="columnNombres" msprop:Generator_ColumnPropNameInRow="Nombres" msprop:Generator_ColumnPropNameInTable="NombresColumn" msprop:Generator_UserColumnName="Nombres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CORSANDataSet2" targetNamespace="http://tempuri.org/CORSANDataSet2.xsd" xmlns:mstns="http://tempuri.org/CORSANDataSet2.xsd" xmlns="http://tempuri.org/CORSANDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CORSANConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CORSANConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Spic.My.MySettings.GlobalReference.Default.CORSANConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_nom_personal_Activo_con_maquilaTableAdapter" GeneratorDataComponentClassName="V_nom_personal_Activo_con_maquilaTableAdapter" Name="V_nom_personal_Activo_con_maquila" UserDataComponentName="V_nom_personal_Activo_con_maquilaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CORSANConnectionString (MySettings)" DbObjectName="CORSAN.dbo.V_nom_personal_Activo_con_maquila" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT nit, nombres FROM dbo.V_nom_personal_Activo_con_maquila</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nit" DataSetColumn="nit" />
+              <Mapping SourceColumn="nombres" DataSetColumn="nombres" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CORSANDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CORSANDataSet2" msprop:Generator_UserDSName="CORSANDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_nom_personal_Activo_con_maquila" msprop:Generator_TableClassName="V_nom_personal_Activo_con_maquilaDataTable" msprop:Generator_TableVarName="tableV_nom_personal_Activo_con_maquila" msprop:Generator_RowChangedName="V_nom_personal_Activo_con_maquilaRowChanged" msprop:Generator_TablePropName="V_nom_personal_Activo_con_maquila" msprop:Generator_RowDeletingName="V_nom_personal_Activo_con_maquilaRowDeleting" msprop:Generator_RowChangingName="V_nom_personal_Activo_con_maquilaRowChanging" msprop:Generator_RowEvHandlerName="V_nom_personal_Activo_con_maquilaRowChangeEventHandler" msprop:Generator_RowDeletedName="V_nom_personal_Activo_con_maquilaRowDeleted" msprop:Generator_RowClassName="V_nom_personal_Activo_con_maquilaRow" msprop:Generator_UserTableName="V_nom_personal_Activo_con_maquila" msprop:Generator_RowEvArgName="V_nom_personal_Activo_con_maquilaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nit" msprop:Generator_ColumnVarNameInTable="columnnit" msprop:Generator_ColumnPropNameInRow="nit" msprop:Generator_ColumnPropNameInTable="nitColumn" msprop:Generator_UserColumnName="nit" type="xs:decimal" />
+              <xs:element name="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_UserColumnName="nombres">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:V_nom_personal_Activo_con_maquila" />
+      <xs:field xpath="mstns:nit" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
