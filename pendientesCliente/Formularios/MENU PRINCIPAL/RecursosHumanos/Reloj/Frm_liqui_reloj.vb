@@ -3599,6 +3599,224 @@ Public Class Frm_liqui_reloj
 
             End If
 
+            '   BLOQUE PARA SABADOS NORMALES
+            If (dt.Rows(i).Item("sabado") = "TRUE" And dt.Rows(i).Item("festivo") = "false") Then
+                'VERIFICAR SI ENTRA EN LA MAÑANA
+                If (fec_hora_entro.TimeOfDay >= TimeSpan.Parse("04:30:00") And fec_hora_salio.TimeOfDay <= TimeSpan.Parse("20:30:00")) Then
+                    'VALIDAMOS EL TURNO ASIGNADO 1
+                    If objRelojLn.verificar_turno_dia(dt.Rows(i).Item("nit"), objOpSimplesLn.cambiarFormatoFecha(dt.Rows(i).Item("FechaEntrada")), 1) Then
+
+                        If (HorasTrabajadas <= 8) Then
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = HorasTrabajadas
+                        Else
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("Ord") = 8
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("ED") = HorasTrabajadas - 8
+                        End If
+                    End If
+                    'VERIFICAR EL TURNO ASIGANDO 7
+                    If objRelojLn.verificar_turno_dia(dt.Rows(i).Item("nit"), objOpSimplesLn.cambiarFormatoFecha(dt.Rows(i).Item("FechaEntrada")), 7) Then
+                        If (HorasTrabajadas <= 8) Then
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = HorasTrabajadas
+                        Else
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("Ord") = 8
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("ED") = HorasTrabajadas - 8
+                        End If
+                    End If
+                    'VERIFICAR EL TURNO ASIGANDO 5
+                    If objRelojLn.verificar_turno_dia(dt.Rows(i).Item("nit"), objOpSimplesLn.cambiarFormatoFecha(dt.Rows(i).Item("FechaEntrada")), 5) Then
+                        If (HorasTrabajadas <= 8) Then
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = HorasTrabajadas
+
+                        Else
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = 8
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("ED") = HorasTrabajadas - 8
+                        End If
+                    End If
+                End If
+
+
+                'VERIFICAR SI ENTRA EN LA TARDE
+                If (fec_hora_entro.TimeOfDay >= TimeSpan.Parse("09:30:00") And fec_hora_salio.TimeOfDay <= TimeSpan.Parse("23:30:00")) Then
+                    'VALIDAMOS EL TURNO ASIGNADO 2
+                    If objRelojLn.verificar_turno_dia(dt.Rows(i).Item("nit"), objOpSimplesLn.cambiarFormatoFecha(dt.Rows(i).Item("FechaEntrada")), 2) Then
+                        If (HorasTrabajadas <= 8) Then
+                            If (HorasTrabajadas = 8) Then
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = 7
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 1
+                            Else
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = HorasTrabajadas
+                            End If
+                        Else
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = 7
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 1
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("EN") = HorasTrabajadas - 8
+                        End If
+                    End If
+
+                    'VALIDAMOS EL TURNO ASIGNADO 8
+                    If objRelojLn.verificar_turno_dia(dt.Rows(i).Item("nit"), objOpSimplesLn.cambiarFormatoFecha(dt.Rows(i).Item("FechaEntrada")), 8) Then
+                        If (HorasTrabajadas <= 8) Then
+                            If (HorasTrabajadas = 8) Then
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = 7
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 1
+                            Else
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = HorasTrabajadas
+                            End If
+                        Else
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = 7
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 1
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("EN") = HorasTrabajadas - 8
+                        End If
+                    End If
+
+                    'VALIDAMOS EL TURNO ASIGNADO 22
+                    If objRelojLn.verificar_turno_dia(dt.Rows(i).Item("nit"), objOpSimplesLn.cambiarFormatoFecha(dt.Rows(i).Item("FechaEntrada")), 22) Then
+                        If (HorasTrabajadas <= 8) Then
+                            If (HorasTrabajadas = 8) Then
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("Ord") = 7
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 1
+                            Else
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = HorasTrabajadas
+                            End If
+                        Else
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = 7
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 1
+                            dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("EN") = HorasTrabajadas - 8
+                        End If
+                    End If
+                End If
+
+                'VERIFICAR SI ENTRA EN LA NOCHE
+                If (fec_hora_entro.TimeOfDay >= TimeSpan.Parse("14:30:00") And fec_hora_salio.TimeOfDay <= TimeSpan.Parse("08:30:00")) Then
+                    'VALIDAMOS EL TURNO ASIGNADO 3
+                    If objRelojLn.verificar_turno_dia(dt.Rows(i).Item("nit"), objOpSimplesLn.cambiarFormatoFecha(dt.Rows(i).Item("FechaEntrada")), 3) Then
+
+                        If (dia_siguiente_festivo) Then
+                            If (HorasTrabajadas <= 8) Then
+                                If (HorasTrabajadas = 8) Then
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = 5
+                                Else
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                End If
+                            Else
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 8
+                            End If
+                        Else
+                            If (HorasTrabajadas <= 8) Then
+                                If (HorasTrabajadas = 8) Then
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                Else
+                                    If (HorasTrabajadas >= 3) Then
+                                        dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                        dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                    Else
+                                        dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = HorasTrabajadas
+                                    End If
+
+                                End If
+                            Else
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("EDF") = HorasTrabajadas - 8
+                            End If
+                        End If
+
+                    End If
+
+                    'VALIDAMOS EL TURNO ASIGNADO 8
+                    If objRelojLn.verificar_turno_dia(dt.Rows(i).Item("nit"), objOpSimplesLn.cambiarFormatoFecha(dt.Rows(i).Item("FechaEntrada")), 8) Then
+
+                        If (dia_siguiente_festivo) Then
+                            If (HorasTrabajadas <= 8) Then
+                                If (HorasTrabajadas = 8) Then
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = 5
+                                Else
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                End If
+                            Else
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 8
+                            End If
+                        Else
+                            If (HorasTrabajadas <= 8) Then
+                                If (HorasTrabajadas = 8) Then
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                Else
+                                    If (HorasTrabajadas >= 3) Then
+                                        dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                        dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                    Else
+                                        dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = HorasTrabajadas
+                                    End If
+
+                                End If
+                            Else
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("EDF") = HorasTrabajadas - 8
+                            End If
+                        End If
+
+                    End If
+
+                    'VALIDAMOS EL TURNO ASIGNADO 22
+                    If objRelojLn.verificar_turno_dia(dt.Rows(i).Item("nit"), objOpSimplesLn.cambiarFormatoFecha(dt.Rows(i).Item("FechaEntrada")), 22) Then
+
+                        If (dia_siguiente_festivo) Then
+                            If (HorasTrabajadas <= 8) Then
+                                If (HorasTrabajadas = 8) Then
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = 5
+                                Else
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                End If
+                            Else
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 8
+                            End If
+                        Else
+                            If (HorasTrabajadas <= 8) Then
+                                If (HorasTrabajadas = 8) Then
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                Else
+                                    If (HorasTrabajadas >= 3) Then
+                                        dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                        dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                    Else
+                                        dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = HorasTrabajadas
+                                    End If
+
+                                End If
+                            Else
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("RN") = 3
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("DN") = HorasTrabajadas - 3
+                                dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("EDF") = HorasTrabajadas - 8
+                            End If
+                        End If
+
+                    End If
+
+                End If
+
+                ''VERIFICAR SI ES TURNO SABADO Y TIENE 10H L-V
+                'If objRelojLn.verificar_turno_dia(dt.Rows(i).Item("nit"), objOpSimplesLn.cambiarFormatoFecha(dt.Rows(i).Item("FechaEntrada")), 0) Then
+                '    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("OrD") = 0
+                '    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("ED") = HorasTrabajadas
+                '    dt_procesado.Rows(dt_procesado.Rows.Count - 1).Item("ExtP") = HorasTrabajadas
+                'End If
+
+            End If
+
+
             'Zona para agregar conceptos
             If chk_temporales.Checked = True Then
                 dtConceptos = agregar_Conceptos(fec_hora_entro, dt.Rows(i).Item("nit"))
